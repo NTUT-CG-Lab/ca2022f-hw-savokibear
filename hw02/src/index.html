@@ -143,8 +143,11 @@
 
     let backgroundDragEL = document.querySelector("#backgroundDrag");
 
-    backgroundDragEL.addEventListener("drop", (e) => {
-      alert("TODO background drop");
+   backgroundDragEL.addEventListener("dragover", (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "copy";
+      // Explicitly show this is a copy.
     });
 
     backgroundDragEL.addEventListener("drop", (e) => {
