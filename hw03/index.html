@@ -195,7 +195,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 01</h1>
+      <h1>作業 03</h1>
     </div>
   </div>
 
@@ -203,13 +203,14 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       作業程式碼，請放在 src 檔案夾。
+      <input type="button" name="back" onclick="parent.location='./src/index.html'" value="...按我...按我...按我...">
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。
+      <p>這禮拜很榮幸能聆聽業界人士的演講，並且在作業3中認識到了很多模型的標準參數以及對某些特定參數進行控制的練習，還能夠透過點擊角色使人物角色播放出聲音檔案，雖然對於程式的編譯與參數的使用上都還有待加強，做作業的過程中有有遇到許多問題，但最終也都能夠一一克服。<p
     </div>
   </div>
 
@@ -226,38 +227,23 @@
         <tr>
           <td rowspan="7" id="myTotal"></td>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>1</td>
-          <td>描述</td>
+          <td id='m1'>2</td>
+          <td>Simple baseline - 綁定參數 (AngleX、AngleY、AngleZ) </td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>1</td>
-          <td>描述</td>
+          <td id='m2'>6</td>
+          <td>Medium baseline - 綁定參數 (BrowLY、BrowRY、BrowLX、BrowRX) </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+          <td id='m2'>6</td>
+          <td>Strong baseline - 標準參數、特定參數控制 </td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>1</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
-          <td id='m4'>1</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked" ></td>
-          <td id='m5'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked="checked" /></td>
-          <td id='m6'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked="checked" /></td>
-          <td id='m7'>2</td>
-          <td>描述</td>
+          <td id='m3'>2</td>
+          <td>Strong baseline - 觸碰身體會發出聲音 </td>
         </tr>
       </table>
     </div>
@@ -267,7 +253,7 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="savoki.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -312,18 +298,6 @@
 
     if (d3.select("#myCheckbox4").property("checked")){
       score += parseInt(d3.select('#m4').html());   
-    }
-
-    if (d3.select("#myCheckbox5").property("checked")){
-      score += parseInt(d3.select('#m5').html());   
-    }
-
-    if (d3.select("#myCheckbox6").property("checked")){
-      score += parseInt(d3.select('#m6').html());   
-    }
-
-    if (d3.select("#myCheckbox7").property("checked")){
-      score += parseInt(d3.select('#m7').html());   
     }
 
     d3.select("#myTotal").html(score);    
