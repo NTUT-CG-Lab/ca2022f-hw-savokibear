@@ -215,7 +215,7 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12">
+ <div class="row hw12">
     <div class="col-md-12 twenty">
       <table>
         <tr>
@@ -228,22 +228,17 @@
           <td rowspan="7" id="myTotal"></td>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
           <td id='m1'>3</td>
-          <td> </td>
+          <td>Simple baseline - 安裝OBS Studio </td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td> </td>
+          <td>Medium baseline - 修改Live2D人物大小並上傳專案到作品集的src,並有按鈕連結至Demo網站 (1pt)設置 OBS 畫面 ( 有Live2D人物、直播背景視窗及音訊擷取 ) (1pt) 完成 OBS 與 Youtube 的串流設定 (1pt) </td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
-          <td id='m4'>1</td>
-          <td> </td>
+          <td>Strong baseline - 以講述自身故事為主題進行 Youtube直播, 並以至少7頁的投影片為背景直播時長至少有1分鐘, 並保留直播存檔 </td>
         </tr>
       </table>
     </div>
@@ -252,8 +247,9 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/wJh0H1ypskQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
+      <video id="video1" style="width:100%;max-width:100%;" controls="">
+        <source src="savoki.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 
@@ -293,10 +289,6 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
-    }
-
-    if (d3.select("#myCheckbox4").property("checked")){
-      score += parseInt(d3.select('#m4').html());   
     }
 
     d3.select("#myTotal").html(score);    
